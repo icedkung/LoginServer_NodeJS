@@ -33,18 +33,6 @@ app.get("/", (req, res) => {
     res.send({ status:"ok", message: "TIGET IS READY!" });
 });
 
-app.get("/users" , (req, res) => {
-    dbEvent.getAllUser((err, rows) => {
-        if (err) {
-            res.json({ status:"err", message: "Database error please try again later!" });
-            } else {
-                res.json({ status:"ok", message: "Get all users successfully", data: rows });
-            }
-        }
-    );
-});
-
-
 
 app.get("/users", (req, res) => {
     const token = req.headers["authorization"];
