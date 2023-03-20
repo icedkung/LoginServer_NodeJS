@@ -93,4 +93,4 @@ const dbEvent = {
 
 
 
-module.exports = {dbEvent};
+module.exports = { dbEvent };
